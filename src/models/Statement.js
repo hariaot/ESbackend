@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require("sequelize");
 
-class Report extends Model {
+class Statement extends Model {
   static init(connection) {
     super.init(
       {
@@ -14,8 +14,8 @@ class Report extends Model {
   }
 
   static associate(models) {
-    this.belongsTo(models.Student, { foreignKey: "id_student", as: "student" });
+    this.belongsTo(models.Cpp, { foreignKey: "id", as: "cpp" });
   }
 }
 
-module.exports = Report
+module.exports = Statement
