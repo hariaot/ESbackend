@@ -38,6 +38,18 @@ module.exports = {
         allowNull: false,
         defaultValue: new Date(),
       },
+      updated_at: {
+        type: Sequelize.DATE,
+        allowNull: false,
+        defaultValue: new Date(),
+      },
+      id_report: {
+        type: Sequelize.INTEGER,
+        references: { model: "reports", key: "id" },
+        onUpdate: "CASCADE",
+        onDelete: "CASCADE",
+        allowNull: false,
+      },
     });
   },
 
