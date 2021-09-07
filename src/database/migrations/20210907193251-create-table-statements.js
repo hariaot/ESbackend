@@ -9,7 +9,27 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
       },
-      content: {
+      id_student: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+      },
+      id_advisor: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+      },
+      adv_comment: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      adv_statement: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      cpp_comment: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      cpp_statement: {
         type: Sequelize.STRING,
         allowNull: false,
       },
