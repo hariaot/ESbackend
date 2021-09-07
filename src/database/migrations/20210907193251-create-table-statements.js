@@ -2,7 +2,7 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable("users", {
+    await queryInterface.createTable("statements", {
       id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
@@ -11,13 +11,6 @@ module.exports = {
       },
       content: {
         type: Sequelize.STRING,
-        allowNull: false,
-      },
-      id_student: {
-        type: Sequelize.INTEGER,
-        references: { model: "students", key: "id" },
-        onUpdate: "CASCADE",
-        onDelete: "CASCADE",
         allowNull: false,
       },
       created_at: {
