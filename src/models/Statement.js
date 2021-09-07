@@ -10,11 +10,15 @@ class Statement extends Model {
         adv_statement: DataTypes.STRING,
         cpp_comment: DataTypes.STRING,
         cpp_statement: DataTypes.STRING,
+        id_report: DataTypes.INTEGER,
       },
       {
         sequelize: connection,
       }
     );
+  }
+  static associate(models) {
+    this.belongsTo(models.Report, { foreignKey: "id_report", as: "report" });
   }
 }
 

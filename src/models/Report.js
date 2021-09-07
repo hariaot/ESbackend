@@ -15,6 +15,7 @@ class Report extends Model {
 
   static associate(models) {
     this.belongsTo(models.Student, { foreignKey: "id_student", as: "student" });
+    this.hasMany(models.Statement,{foreignKey: "id_report", as: "report"});
   }
 }
 
