@@ -4,17 +4,17 @@ class Statement extends Model {
   static init(connection) {
     super.init(
       {
-        content: DataTypes.STRING,
-        id_student: DataTypes.INTEGER
+        id_students: DataTypes.INTEGER,
+        id_advisors: DataTypes.INTEGER,
+        adv_comment: DataTypes.STRING,
+        adv_statement: DataTypes.STRING,
+        cpp_comment: DataTypes.STRING,
+        cpp_statement: DataTypes.STRING,
       },
       {
         sequelize: connection,
       }
     );
-  }
-
-  static associate(models) {
-    this.belongsTo(models.Cpp, { foreignKey: "id", as: "cpp" });
   }
 }
 
