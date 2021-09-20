@@ -33,7 +33,7 @@ module.exports = {
       },
       lattes_mddate: {
         type: Sequelize.DATE,
-        allowNull: false,
+        allowNull: true,
       },
       id_advisor: {
         type: Sequelize.INTEGER,
